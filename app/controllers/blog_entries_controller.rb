@@ -2,7 +2,7 @@ class BlogEntriesController < ApplicationController
   # GET /blog_entries
   # GET /blog_entries.json
   def index
-    @blog_entries = BlogEntry.all
+    @blog_entries = BlogEntry.paginate( :all, :per_page => 5, :page => params[:page] ) 
 
     respond_to do |format|
       format.html # index.html.erb
