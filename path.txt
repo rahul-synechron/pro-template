@@ -1,0 +1,2 @@
+signin GET /signin(.:format) {:action=>"new", :controller=>"users/sessions"}
+  root     /                 {:controller=>"home", :action=>"index"}

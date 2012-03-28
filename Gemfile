@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'haml'
 gem 'devise'
 gem 'kaminari'
+gem 'will_paginate', '3.0.pre2'
 
 # Gems used only for assets and not required
 # in production environments by default.

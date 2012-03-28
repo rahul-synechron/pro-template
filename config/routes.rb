@@ -1,5 +1,11 @@
 ProTemplateApp31::Application.routes.draw do
+  resources :blog_entries
+
   devise_for :users
+
+#devise_scope :user do
+#  get "signin",   :to => "users/sessions#new",      :as => :signin
+#end
 
   root :to => "home#index"
 
