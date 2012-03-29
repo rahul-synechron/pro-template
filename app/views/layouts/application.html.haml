@@ -3,7 +3,8 @@
   %head
     %title My Latest Web App
     = stylesheet_link_tag 'web_app_theme'
-    = javascript_include_tag :defaults, :cache => true
+    = javascript_include_tag :defaults, :cache => true 
+    = javascript_include_tag "application", :debug => true
     = csrf_meta_tag
   %body
     #container
@@ -17,7 +18,7 @@
             %li
               = link_to t("web-app-theme.Blog-Entry", :default => "Blogs"),blog_entries_path
             %li
-              = link_to t("web-app-theme.logout", :default => "Logout"), destroy_user_session_path, :method => :delete
+              = link_to t("web-app-theme.signout", :default => "Sign out"), destroy_user_session_path, :method => :delete
         #main-navigation
           %ul.wat-cf
       #wrapper.wat-cf

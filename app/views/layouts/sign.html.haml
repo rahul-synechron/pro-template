@@ -3,6 +3,8 @@
   %head
     %title My Latest Web App
     = stylesheet_link_tag "web_app_theme"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
+    = javascript_include_tag 'jquery-1.3.2.min', 'jquery.validate.min', 'application'
     = csrf_meta_tag
   %body
     #container

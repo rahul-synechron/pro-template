@@ -1,10 +1,25 @@
+<html	>
+<head>
+<script type="text/javascript" >
+jQuery(document).ready(function() {
+//alert("document ready");
+jQuery('#user_new').validate({
+ debug: true,
+  rules: {
+	"user[email]": {required: true, email: true},
+        "user[password]": {required: true},
+       }
+  });
+});
+</script>
+</head>
+<body>
 <h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
+<%= form_for(resource, :class=>"user_new",:id=>"user_new",:as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %>  *<br />
   <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label :password %> *<br />
   <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
@@ -14,4 +29,7 @@
   <div><%= f.submit "Sign in" %></div>
 <% end %>
 
+
 <%= render "links" %>
+</body>
+</html>
