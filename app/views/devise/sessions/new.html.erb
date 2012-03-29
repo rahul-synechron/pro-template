@@ -4,7 +4,7 @@
 jQuery(document).ready(function() {
 //alert("document ready");
 jQuery('#user_new').validate({
- debug: true,
+ //debug: true,
   rules: {
 	"user[email]": {required: true, email: true},
         "user[password]": {required: true},
@@ -15,7 +15,7 @@ jQuery('#user_new').validate({
 </head>
 <body>
 <h2>Sign in</h2>
-<%= form_for(resource, :class=>"user_new",:id=>"user_new",:as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= form_for(resource, :id=>"user_new",:as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %>  *<br />
   <%= f.email_field :email %></div>
 
