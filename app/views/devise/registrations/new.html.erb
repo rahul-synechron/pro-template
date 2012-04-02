@@ -3,7 +3,7 @@
 jQuery(document).ready(function() {
 //alert("document ready");
 jQuery('#user_new').validate({
- debug: true,
+ debug: false,
   rules: {
 	"user[email]": {required: true, email: true},
         "user[password]": {required: true, minlength: 6},
